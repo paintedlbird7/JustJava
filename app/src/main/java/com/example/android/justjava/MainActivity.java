@@ -10,6 +10,7 @@ package com.example.android.justjava;
 
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -24,7 +25,7 @@ import android.widget.Toast;
  */
 public class MainActivity extends AppCompatActivity {
 
-    int quantity = 1;
+    int quantity = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +90,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+
     /**
      * Calculates the price of the order
      *@param addWhippedCream is whether or not the user wants whipped cream
@@ -98,19 +101,19 @@ public class MainActivity extends AppCompatActivity {
      */
 
     private int calculatePrice(boolean addWhippedCream, boolean addChocolate) {
-    // Price of 1 cup of coffee
+        // Price of 1 cup of coffee
         int basePrice = 5;
 
-    //Add $1 if the user wants whipped cream
+        //Add $1 if the user wants whipped cream
         if (addWhippedCream) {
             basePrice = basePrice + 1;
         }
 
-    // Add $2 if the user wants chocolate
+        // Add $2 if the user wants chocolate
         if (addChocolate) {
             basePrice = basePrice + 2;
         }
-    // Calculate the total order price by multiplying
+        // Calculate the total order price by multiplying
         return quantity * basePrice;
     }
 
@@ -141,6 +144,8 @@ public class MainActivity extends AppCompatActivity {
                 R.id.quantity_text_view);
         quantityTextView.setText("" + numberOfCoffees);
     }
+
+
 }
 
 //    /**
@@ -151,4 +156,3 @@ public class MainActivity extends AppCompatActivity {
 //        priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
 //    }
 //}
-

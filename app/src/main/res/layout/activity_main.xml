@@ -10,8 +10,7 @@
     android:orientation="vertical"
     android:paddingLeft="24dp"
     android:paddingRight="16dp"
-    android:paddingTop="16dp"
-    tools:context=".MainActivity">
+    android:paddingTop="16dp">
 
     <EditText
         android:id="@+id/name_field"
@@ -33,6 +32,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="24dp"
         android:text="Whipped cream"
+        android:id="@id/whipped_cream_checkbox"
         android:textSize="16sp"/>
 
     <CheckBox
@@ -40,6 +40,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="24dp"
         android:text="Chocolate"
+        android:id="@id/chocolate_checkbox"
         android:textSize="16sp"/>
 
     <TextView
