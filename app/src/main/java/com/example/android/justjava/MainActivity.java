@@ -10,7 +10,6 @@ package com.example.android.justjava;
 
 
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -51,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the minus button is clicked.
      */
     public void decrement(View view) {
-        if (quantity == 1) {
+        if (quantity <= 1) {
             // Show an error message as a toast
             Toast.makeText(this, "You cannot have less than 1 coffee", Toast.LENGTH_SHORT).show();
             // Exit this method early because there's nothing left to do
