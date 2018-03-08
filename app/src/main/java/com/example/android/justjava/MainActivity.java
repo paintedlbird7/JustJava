@@ -86,7 +86,10 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(Intent.EXTRA_TEXT, priceMessage);
         if (intent.resolveActivity(getPackageManager()) !=null) {
             startActivity(intent);
+
         }
+
+
     }
 
 
@@ -133,7 +136,10 @@ public class MainActivity extends AppCompatActivity {
         priceMessage += "\nTotal: = $" + price;
         priceMessage += "\nThank you!";
         return priceMessage;
+
     }
+
+
 
     /**
      * This method displays the given quantity value on the screen.

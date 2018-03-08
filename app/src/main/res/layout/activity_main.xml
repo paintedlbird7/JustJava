@@ -32,29 +32,7 @@
             android:hint="Name"
             android:inputType="textCapWords"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Toppings"
-            android:textAllCaps="true"/>
 
-        <CheckBox
-            android:id="@id/whipped_cream_checkbox"
-            android:layout_width="288dp"
-            android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:text="Whipped cream"
-            android:textSize="16sp" />
-
-        <CheckBox
-            android:id="@id/chocolate_checkbox"
-            android:layout_width="157dp"
-            android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:text="Chocolate"
-            android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -62,6 +40,8 @@
             android:layout_marginBottom="16dp"
             android:layout_marginTop="16dp"
             android:text="Quantity"
+            android:layout_gravity="center"
+
             android:textAllCaps="true"
             android:textColor="@android:color/holo_blue_dark" />
 
@@ -70,13 +50,15 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:background="#ffbb"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:weightSum="1">
 
             <Button
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:onClick="decrement"
-                android:text="-" />
+                android:text="-"
+                android:layout_weight="0.40" />
 
 
             <TextView
@@ -92,16 +74,43 @@
             <Button
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:layout_weight="0.52"
                 android:onClick="increment"
                 android:text="+" />
 
         </LinearLayout>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Toppings"
+            android:layout_gravity="center"
+            android:textAllCaps="true"/>
+
+        <CheckBox
+            android:id="@id/whipped_cream_checkbox"
+            android:layout_width="163dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="11dp"
+            android:text="Whipped cream"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@id/chocolate_checkbox"
+            android:layout_width="163dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="12dp"
+            android:text="Chocolate"
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="22dp"
             android:text="Order Summary"
             android:layout_gravity="center"
             android:textAllCaps="true" />
@@ -119,7 +128,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="6dp"
             android:onClick="submitOrder"
             android:layout_gravity="center"
             android:text="Order" />
